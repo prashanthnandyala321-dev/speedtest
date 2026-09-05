@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Pulse Speed Test",
+  "version": "1.0.0",
+  "description": "A compact internet speed test widget fixed to the top-right of every page.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://speed.cloudflare.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["widget.js"],
+      "css": ["widget.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Pulse Speed Test"
+  },
+  "icons": {}
+}

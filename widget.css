@@ -1,0 +1,44 @@
+#pulse-speed-widget {
+  all: initial;
+  position: fixed;
+  z-index: 2147483647;
+  top: 14px;
+  right: 14px;
+  width: 56px;
+  height: 56px;
+  color: #eef5ff;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border: 2px solid #ffffffaa;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px #0006;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  cursor: grab;
+  user-select: none;
+}
+
+#pulse-speed-widget * { box-sizing: border-box; font-family: inherit; }
+#pulse-speed-widget.pulse-dragging { cursor: grabbing; }
+#pulse-speed-widget .pulse-head { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+#pulse-speed-widget .pulse-title { color: #ffffff; font-size: 9px; font-weight: 900; letter-spacing: -.02em; text-align: center; white-space: nowrap; }
+#pulse-speed-widget .pulse-actions { display: flex; gap: 5px; }
+#pulse-speed-widget .pulse-icon { display: none; width: 23px; height: 23px; padding: 0; border: 0; border-radius: 6px; color: #b5c5db; background: #1d304c; cursor: pointer; }
+#pulse-speed-widget .pulse-icon:hover { color: white; background: #2a456a; }
+#pulse-speed-widget .pulse-body { display: none; padding: 10px 12px 12px; }
+#pulse-speed-widget .pulse-status { min-height: 17px; margin-bottom: 8px; color: #a7b8cf; font-size: 11px; }
+#pulse-speed-widget .pulse-results { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+#pulse-speed-widget .pulse-result { padding: 7px 5px; border-radius: 8px; text-align: center; background: #0b1729; }
+#pulse-speed-widget .pulse-result small { display: block; color: #8296b1; font-size: 9px; letter-spacing: .05em; }
+#pulse-speed-widget .pulse-value { margin-top: 3px; font-size: 16px; font-weight: 800; }
+#pulse-speed-widget .pulse-unit { color: #8296b1; font-size: 9px; }
+#pulse-speed-widget .pulse-refresh { width: 100%; margin-top: 9px; padding: 8px; border: 0; border-radius: 8px; color: #ffffff; background: linear-gradient(90deg, #a855f7, #ec4899); cursor: pointer; font-size: 11px; font-weight: 800; }
+#pulse-speed-widget .pulse-refresh:disabled { cursor: wait; opacity: .55; }
+#pulse-speed-widget.pulse-expanded { width: 228px; height: auto; background: #101d31; border-radius: 14px; cursor: default; }
+#pulse-speed-widget.pulse-expanded .pulse-head { justify-content: space-between; width: auto; height: auto; padding: 10px 12px; border-bottom: 1px solid #263c5b; }
+#pulse-speed-widget.pulse-expanded .pulse-title { color: #f0a7ff; font-size: 12px; letter-spacing: .06em; text-align: left; }
+#pulse-speed-widget.pulse-expanded .pulse-icon { display: block; }
+#pulse-speed-widget.pulse-expanded .pulse-body { display: block; }
+#pulse-speed-widget.pulse-expanded .pulse-actions { display: flex; }
+#pulse-speed-widget.pulse-expanded .pulse-collapse { display: block; }
+#pulse-speed-widget.pulse-expanded .pulse-open { display: none; }
+#pulse-speed-widget.pulse-collapsed { width: 56px; height: 56px; }
